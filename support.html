@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap link -->
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- font awesome link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Swiper -->
+<link href="./assets/js/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<!-- Owl carousel link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<!-- aos -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- style link -->
+<link rel="stylesheet" href="./assets/css/style.css">
+<!-- mobile Nav CSS -->
+<link rel="stylesheet" href="./assets/css/nav.css">
+<!-- bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<style>
+    section{
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  flex-direction: row;
+  justify-content:none;
+  align-items:none;
+  overflow: hidden;
+  
+}
+
+section .content{
+  position: relative;
+  z-index: 1;
+  margin: none;
+  max-width:none;
+  top: 5%;
+  display: flex;
+
+
+}
+    
+.SeeArticle{
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    padding: 12px 23px;
+    gap: 10px;
+    border: 0;
+    color: var(--black);
+    background: #F4F4F4;
+    border-radius: 60px;
+}
+
+.SeeArticle:hover{
+  color: var(--black);
+  background-color: var(--yellow);
+  box-shadow: 0px 0px 20px var(--yellow);
+  transition: all .3s;
+}  
+.testimonial-item a
+{
+  color: #000000;
+}
+</style>
+  <title>BEE FLEX</title>
+</head>
+<div>
+  <!-- Pre-Loading  -->
+  
+
+<!-- Navigation section  -->
+
+<!-- Navigation -->
+<!-- Navigation section  -->
+<header id="header" class="header align-items-center d-flex " onscroll="myFunction()">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between ">
+
+    <a href="index.html" class="logo d-flex align-items-center mb-2">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="imgs/icons/logo.svg" alt="..." height="40">
+     
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul >
+        <li><a href="index.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+            
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="btn nav-btn nav-btn-anime" style="min-height:40px; color:var(--yellow);border:0px;" href="index.html">Start Now</a></li>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+
+</header ><!-- End Header -->
+
+<script>
+const header = document.getElementById("header");
+const sticky = header.offsetTop;
+
+function myFunction() {
+if (window.scrollY >= sticky) {
+  header.classList.add("fixed-top")
+} else {
+  header.classList.remove("fixed-top");
+}
+}
+/**
+ * Mobile nav toggle
+ */
+const mobileNavShow = document.querySelector('.mobile-nav-show');
+const mobileNavHide = document.querySelector('.mobile-nav-hide');
+
+document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
+el.addEventListener('click', function(event) {
+  event.preventDefault();
+  mobileNavToogle();
+})
+});
+
+function mobileNavToogle() {
+document.querySelector('body').classList.toggle('mobile-nav-active');
+mobileNavShow.classList.toggle('d-none');
+mobileNavHide.classList.toggle('d-none');
+}
+
+/**
+* Hide mobile nav on same-page/hash links
+*/
+document.querySelectorAll('#navbar a').forEach(navbarlink => {
+
+if (!navbarlink.hash) return;
+
+let section = document.querySelector(navbarlink.hash);
+if (!section) return;
+
+navbarlink.addEventListener('click', () => {
+  if (document.querySelector('.mobile-nav-active')) {
+    mobileNavToogle();
+  }
+});
+
+});
+</script>
+<!--End of Navigation section-->
+
+<!-- bg image -->
+<section style="width: 100%;">
+  
+  <div class="content container"  data-aos="fade-down" style="width: 100%;">
+    
+    <div class="d-flex bd-highlight mt-5">
+        <div class=" bd-highlight"><h2 >HOW CAN WE <strong>HELP</strong>? </h2></div>
+        <div class="ms-auto p-2 bd-highlight">
+            <div class="input-box" style="float: right;margin-left: 200px;">
+                <input type="text" placeholder="Search" class="form-control">
+                <i class="fa fa-search"></i>                    
+              </div>
+        </div>
+      </div>
+
+    <!-- ================================================================== -->
+    <!-- Cards -->
+      <div class="testimonials row mx-auto container">
+        <div class="testimonial-wrap  col-lg-6  col-md-4 col-sm-2">
+            <div class="testimonial-item">
+              <div class="d-flex align-items-center">
+                <a href=""><img src="./imgs/icons/rocket.svg" class="testimonial-img flex-shrink-0" alt=""></a>
+                <div>
+                 <a href=""> <h3>How to get started with BeeFlex</h3></a>
+                  <!-- <h4>Writer</h4> -->
+                 
+                </div>
+              </div>
+              <p>
+               
+              <a href="">  • Everything you need to know to get started with BeeFlex</a>
+               
+              </p>
+              <a href="supportDetails.html">  <button class="SeeArticle btn btn-secondary mt-5">See article</button> </a>
+            </div>
+          </div>
+          <div class="testimonial-wrap  col-lg-6  col-md-4 col-sm-2">
+            <div class="testimonial-item">
+              <div class="d-flex align-items-center">
+                <a href=""><img src="./imgs/icons/excel.svg" class="testimonial-img flex-shrink-0" alt=""></a>
+                <div>
+                 <a href=""> <h3>Import & export with Excel</h3></a>
+                  <!-- <h4>Writer</h4> -->
+                 
+                </div>
+              </div>
+              <p>
+               
+                <a href="">• Learn how to import and export Excel data</a>
+               
+              </p>
+              <a href="supportDetails.html">  <button class="SeeArticle btn btn-secondary mt-5">See article</button> </a>
+            </div>
+          </div>
+          <div class="testimonial-wrap  col-lg-6  col-md-4 col-sm-2">
+            <div class="testimonial-item">
+              <div class="d-flex align-items-center">
+                <a href=""><img src="./imgs/icons/groupOfpeople.svg" class="testimonial-img flex-shrink-0" alt=""></a>
+                <div>
+                 <a href=""> <h3>Get started with BeeFlex HRM</h3></a>
+                  <!-- <h4>Writer</h4> -->
+                 
+                </div>
+              </div>
+              <p>
+               
+                <a href="">• Everything you need to know about using BeeFlex HRM</a>
+               
+              </p>
+              <a href="supportDetails.html">  <button class="SeeArticle btn btn-secondary mt-5">See article</button> </a>
+            </div>
+          </div>
+          <div class="testimonial-wrap  col-lg-6  col-md-4 col-sm-2">
+            <div class="testimonial-item">
+              <div class="d-flex align-items-center">
+                <a href=""><img src="./imgs/icons/rocket.svg" class="testimonial-img flex-shrink-0" alt=""></a>
+                <div>
+                  <a href=""><h3>How to get started with BeeFlex</h3></a>
+                  <!-- <h4>Writer</h4> -->
+                 
+                </div>
+              </div>
+              <p>
+               
+               <a href=""> • Everything you need to know to get started with BeeFlex</a>
+               
+              </p>
+              <a href="supportDetails.html">  <button class="SeeArticle btn btn-secondary mt-5">See article</button> </a>
+            </div>
+          </div>
+          <div class="testimonial-wrap  col-lg-6  col-md-4 col-sm-2">
+            <div class="testimonial-item">
+              <div class="d-flex align-items-center">
+                <a href=""><img src="./imgs/icons/rocket.svg" class="testimonial-img flex-shrink-0" alt=""></a>
+                <div>
+                  <a href=""><h3>How to get started with BeeFlex</h3></a>
+                  <!-- <h4>Writer</h4> -->
+                 
+                </div>
+              </div>
+              <p>
+               
+                <a href="">• Everything you need to know to get started with BeeFlex</a>
+               
+              </p>
+              <a href="supportDetails.html">  <button class="SeeArticle btn btn-secondary mt-5">See article</button> </a>
+            </div>
+          </div>
+      </div>
+    
+<!-- ================================================================== -->
+
+
+  </div> 
+</section>
+      <!-- =============POPULAR QUESTIONS ============ -->
+      <div class="questions mt-5 mb-5" ></div>
+      <div>
+        <h1 class="PopulerQ" >Popular Questions</h1>
+      </div>
+       <div>
+        <p class="Populerpar"  data-aos="fade-up" data-aos-delay="200">Got a question? No problem, it happens. Check out our FAQ’s below to find the answer you are looking for.</p>
+       </div>
+      </div>
+        <!-- ======= Frequently Asked Questions Section ======= -->
+      
+          <div class="container mt-5" data-aos="fade-up">
+      
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-lg-10">
+      
+                <div class="accordion accordion-flush" id="faqlist">
+      
+                  <div class="accordion-item mt-3  border-0">
+                    <h3 class="accordion-header">
+                      <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                       <img src="./imgs/numbers/yellowNo1.svg" alt="">
+                     <span class="question"> What is BeeFlex?</span>
+                      </button>
+                    </h3>
+                    <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                      <div class="accordion-body">
+                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                      </div>
+                    </div>
+                  </div><!-- # Faq item-->
+      
+                  <div class="accordion-item mt-3 border-0">
+                    <h3 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                        <img src="./imgs/numbers/yellowNo2.svg" alt="">
+                        <span class="question">How to use BeeFlex?</span>
+                      </button>
+                    </h3>
+                    <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                      <div class="accordion-body">
+                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                      </div>
+                    </div>
+                  </div><!-- # Faq item-->
+      
+                  <div class="accordion-item mt-3 border-0">
+                    <h3 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                        <img src="./imgs/numbers/yellowNo3.svg"  alt="">
+                        <span class="question"> 
+                          Import & export with Excel?
+                        </span>
+                      </button>
+                    </h3>
+                    <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                      <div class="accordion-body">
+                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                      </div>
+                    </div>
+                  </div>
+      
+              
+      
+                </div>
+      
+              </div>
+            </div>
+      
+          </div>
+        </section><!-- End Frequently Asked Questions Section -->
+
+<!-- ========================= -->
+<!--footer-->
+<footer >
+  <div class="row d-flex justify-content-center mt-5" style="background: #F5F5F5;border-radius: 100px 100px 0px 0px;" data-aos="flip-down" >
+    <div class="coloumn col-lg-2 col-md-12 col-sm-12 p-4 text-center">
+      <img src="imgs/icons/logo.svg" class="f-logo mb-3">
+      <p style="color:#999999;font-size: small;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, debitis? Delectus voluptate modi, debitis consequuntur cumque quae ipsam perspiciatis! Nemo accusamus natus ipsam voluptate! Iusto impedit distinctio natus voluptatibus hic!
+      </p>
+    </div>
+    <div class="coloumn col-lg-2 col-md-4 col-sm-2 py-5 text-center">
+       
+      <h3 class="title p-0 pb-2">Features</h3>
+      <ul>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Integrations</a></li>
+        <li><a href="#">Automations</a></li>
+        <li><a href="#">Files</a></li>
+        <li><a href="#">Dashboards</a></li>
+      </ul>      
+    </div>
+
+    <div class="coloumn col-lg-2 col-md-4 col-sm-2 py-5 text-center">
+      <h3 class="title p-0 pb-2"> Use cases</h3>
+        <ul>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Project management</a></li>
+          <li><a href="#">Sales</a></li>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">HR</a></li>
+          <li><a href="#">IT</a></li>
+        </ul> 
+    </div>
+
+    <div class="coloumn col-lg-2 col-md-4 col-sm-2 py-5 text-center">
+      <h3 class="title p-0 pb-2">Company</h3>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul> 
+    </div>
+    
+    <div class="coloumn col-lg-2 col-md-12 col-sm-12 py-5 text-center">
+      <div class="contact-info text-white mx-auto" style="height: 135px; background: linear-gradient(180deg, #3F3F3F 0%, #000000 100%);border-radius: 80px 0px;">
+        <span class="d-flex justify-content-center pt-4">+961 70 123 456</span>
+        <span class="d-flex justify-content-center" style="color: var(--yellow);">beeflex@gmail.com</span>
+      </div>       
+    </div>
+
+  </div>
+  <div class=" copy-right" style="background: #F5F5F5;">
+    <div class="container d-flex bd-highlight">
+      <div class="p-2 flex-grow-1 bd-highlight"> &copy; 2022 BeeFlex. All Rights Reserved. </div>
+      <div class="p-2 bd-highlight">Privacy Policy</div>
+      <div class="p-2 bd-highlight">Terms of Use</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- bootstrap js -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<!-- owl carousel js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+<!-- aos-animations-js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
+  <!--End of Footer-->
+  
+  
+ 
+  

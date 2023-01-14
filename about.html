@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap link -->
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- font awesome link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Swiper -->
+<link href="./assets/js/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<!-- Owl carousel link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<!-- aos -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- style link -->
+<link rel="stylesheet" href="./assets/css/style.css">
+<!-- mobile Nav CSS -->
+<link rel="stylesheet" href="./assets/css/nav.css">
+<!-- bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<style>
+    section{
+        height: auto;
+        zoom: 95%;
+}
+section::before{
+  height: 20%;
+  }
+  .card
+  {
+    border: 0;
+  }
+  .card:hover
+  {
+    border-bottom: 10px solid var(--yellow);;
+  }
+</style>
+  <title>BEE FLEX</title>
+</head>
+<body>
+  <!-- Pre-Loading  -->
+  
+
+<!-- Navigation section  -->
+
+<!-- Navigation -->
+<!-- Navigation section  -->
+<header id="header" class="header align-items-center d-flex " onscroll="myFunction()">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between ">
+
+    <a href="index.html" class="logo d-flex align-items-center mb-2">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="imgs/icons/logo.svg" alt="..." height="40">
+     
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul >
+        <li><a href="index.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+            
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="btn nav-btn nav-btn-anime" style="min-height:40px; color:var(--yellow);border:0px;" href="index.html">Start Now</a></li>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+
+</header ><!-- End Header -->
+
+<script>
+const header = document.getElementById("header");
+const sticky = header.offsetTop;
+
+function myFunction() {
+if (window.scrollY >= sticky) {
+  header.classList.add("fixed-top")
+} else {
+  header.classList.remove("fixed-top");
+}
+}
+/**
+ * Mobile nav toggle
+ */
+const mobileNavShow = document.querySelector('.mobile-nav-show');
+const mobileNavHide = document.querySelector('.mobile-nav-hide');
+
+document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
+el.addEventListener('click', function(event) {
+  event.preventDefault();
+  mobileNavToogle();
+})
+});
+
+function mobileNavToogle() {
+document.querySelector('body').classList.toggle('mobile-nav-active');
+mobileNavShow.classList.toggle('d-none');
+mobileNavHide.classList.toggle('d-none');
+}
+
+/**
+* Hide mobile nav on same-page/hash links
+*/
+document.querySelectorAll('#navbar a').forEach(navbarlink => {
+
+if (!navbarlink.hash) return;
+
+let section = document.querySelector(navbarlink.hash);
+if (!section) return;
+
+navbarlink.addEventListener('click', () => {
+  if (document.querySelector('.mobile-nav-active')) {
+    mobileNavToogle();
+  }
+});
+
+});
+</script>
+<!--End of Navigation section-->
+
+<!-- bg image -->
+<section>
+  
+  <div class="content mt-5">
+    <div></div>
+    <h2>We are </h2>
+    <h2 class="word"><strong>BEEFLEX</strong></h2>
+    <h5 style="align-items: center; text-align:center;">We make your advanced worrying <br>
+        become advance thinking and planning</h5>
+    
+  </div>
+
+
+<div class="container mt-5">
+    <div class="row mt-5 mx-3">
+        <div class="col-lg-6 col-md-12 col-sm-12 position-relative">
+            <img src="./imgs/icons/dots.svg" class="img-fluid mb-3 ms-1" alt="">
+            <h2 class="mb-3 title p-0">Our<strong style="color: var(--yellow);"> Mission</strong></h2>
+            <p class="text-secondary " >
+                Lorem ipsum dolor sit amet consectetur. Integer ipsum ornare proin vitae mollis. Sed dictumst aliquam porta nullam magna interdum pellentesque. Sit ac elit commodo vulputate donec aliquam condimentum vitae pulvinar. Gravida viverra pellentesque nulla morbi pharetra euismod non enim massa. Aliquam nam facilisis dui velit feugiat ipsum. Sit sem odio euismod a fermentum est et consequat dignissim. Tincidunt potenti sed ultricies facilisis in adipiscing arcu amet hendrerit. Amet id sit cras nec. Eu rhoncus ac sed dolor placerat turpis eros. Fermentum egestas turpis fermentum malesuada. Ac quis urna praesent urna volutpat mauris sed ornare viverra. Morbi at turpis ante tortor pulvinar ultricies justo facilisis massa. Quisque vitae sed rutrum dignissim tellus diam viverra odio. Integer arcu pharetra consectetur sagittis id ligula dictum.
+            </p>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 position-relative d-flex justify-content-center">
+            <img src="./imgs/aboutUs.svg" id="aboutUsImg" class="" style="z-index: -1; align-items: center;top: 0; right: 0;" alt="">
+            <img src="./imgs/aboutUs(2).svg" id="aboutUsImg" class="position-absolute mx-auto mt-5" style="z-index: 1;top: 0; " alt="">
+        </div>
+       
+    </div>
+
+    <!-- ============================= -->
+        <!-- Values starts here -->
+        <div class="mx-auto mb-5" style="text-align: end; width:20% ;">
+            <h2 class=" mx-auto title p-0">Our Core <strong style="color: var(--yellow);margin-left: 5px;"> Values</strong></h2>
+            <img src="./imgs/icons/dots.svg" class="img-fluid" alt="">
+        </div>
+     <!-- ============================= -->
+        <!-- Cards -->
+        <div class="core-cards row mb-1" style="max-height:440px;">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card text-center bg-white " style="box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;">
+                    <div class="card-body p-5">
+                      <h1 class="title card-title p-2">Deliver the best customer experience, period.</h1>
+                      <p class="card-text mb-5 mt-3">Lorem ipsum dolor sit amet consectetur. Integer ipsum ornare proin vitae mollis. Sed dictumst aliquam porta nullam magna interdum pellentesque. Sit ac elit commodo vulputate donec aliquam condimentum vitae pulvinar..</p>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3" >
+                <div class="card text-center bg-white " style="box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;">
+                    <div class="card-body p-5">
+                      <h1 class="title card-title p-2">Deliver the best customer experience, period.</h1>
+                      <p class="card-text mb-5 mt-3">Lorem ipsum dolor sit amet consectetur. Integer ipsum ornare proin vitae mollis. Sed dictumst aliquam porta nullam magna interdum pellentesque. Sit ac elit commodo vulputate donec aliquam condimentum vitae pulvinar..</p>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3" >
+                <div class="card text-center bg-white " style="box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;">
+                    <div class="card-body p-5">
+                      <h1 class="title card-title p-2">Deliver the best customer experience, period.</h1>
+                      <p class="card-text mb-5 mt-3">Lorem ipsum dolor sit amet consectetur. Integer ipsum ornare proin vitae mollis. Sed dictumst aliquam porta nullam magna interdum pellentesque. Sit ac elit commodo vulputate donec aliquam condimentum vitae pulvinar..</p>
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+       
+       
+    <!-- ============================= -->
+    </div>
+  
+</section>
+
+
+
+<!-- ========================= -->
+<!--footer-->
+<footer >
+  <div class="row d-flex justify-content-center mt-5" style="background: #F5F5F5;border-radius: 100px 100px 0px 0px;" data-aos="flip-down" >
+    <div class="coloumn col-lg-2 col-md-12 col-sm-12 p-4 text-center">
+      <img src="imgs/icons/logo.svg" class="f-logo mb-3">
+      <p style="color:#999999;font-size: small;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, debitis? Delectus voluptate modi, debitis consequuntur cumque quae ipsam perspiciatis! Nemo accusamus natus ipsam voluptate! Iusto impedit distinctio natus voluptatibus hic!
+      </p>
+    </div>
+    <div class="coloumn col-lg-2 col-md-4 col-sm-2 py-5 text-center">
+       
+      <h3 class="title p-0 pb-2">Features</h3>
+      <ul>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Integrations</a></li>
+        <li><a href="#">Automations</a></li>
+        <li><a href="#">Files</a></li>
+        <li><a href="#">Dashboards</a></li>
+      </ul>      
+    </div>
+
+    <div class="coloumn col-lg-2 col-md-4 col-sm-2 py-5 text-center">
+      <h3 class="title p-0 pb-2"> Use cases</h3>
+        <ul>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Project management</a></li>
+          <li><a href="#">Sales</a></li>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">HR</a></li>
+          <li><a href="#">IT</a></li>
+        </ul> 
+    </div>
+
+    <div class="coloumn col-lg-2 col-md-4 col-sm-2 py-5 text-center">
+      <h3 class="title p-0 pb-2">Company</h3>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul> 
+    </div>
+    
+    <div class="coloumn col-lg-2 col-md-12 col-sm-12 py-5 text-center">
+      <div class="contact-info text-white mx-auto" style="height: 135px; background: linear-gradient(180deg, #3F3F3F 0%, #000000 100%);border-radius: 80px 0px;">
+        <span class="d-flex justify-content-center pt-4">+961 70 123 456</span>
+        <span class="d-flex justify-content-center" style="color: var(--yellow);">beeflex@gmail.com</span>
+      </div>       
+    </div>
+
+  </div>
+  <div class=" copy-right" style="background: #F5F5F5;">
+    <div class="container d-flex bd-highlight">
+      <div class="p-2 flex-grow-1 bd-highlight"> &copy; 2022 BeeFlex. All Rights Reserved. </div>
+      <div class="p-2 bd-highlight">Privacy Policy</div>
+      <div class="p-2 bd-highlight">Terms of Use</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- bootstrap js -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<!-- owl carousel js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+<!-- aos-animations-js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
+
+<!--End of Footer-->
